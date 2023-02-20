@@ -5,7 +5,6 @@ public class Driver {
         archivo arch=new archivo();
         ArrayList<String> listaRespuesta = arch.leerArchivo();
         calculadora calc=new calculadora();
-
         Scanner teclado=new Scanner(System.in);
         System.out.println("---------------- BIENVENIDA ----------------");
         System.out.println("1. ArrayList ");
@@ -18,9 +17,9 @@ public class Driver {
             for(int i=0;i<listaRespuesta.size();i++){
                 String res="";
                 StacksArray array=new StacksArray();
-                res=array.convertir(listaRespuesta.get(i));
+                res=StacksArray.convertir(listaRespuesta.get(i));
                 System.out.println(res);
-                int resultado = calc.evaluar(res);
+                int resultado = calculadora.evaluar(res);
                 System.out.println(resultado);
             }
 
@@ -28,14 +27,14 @@ public class Driver {
             for(int i=0;i<listaRespuesta.size();i++){
                 String res="";
                 StacksVectores array2=new StacksVectores();
-                res=array2.convertir(listaRespuesta.get(i));
+                res=StacksVectores.convertir(listaRespuesta.get(i));
                 //Meterle espacios
                 manejoCaracteres manejo=new manejoCaracteres();
                 String res2="";
-                res2=manejo.insertSpaces(res);
+                res2=manejoCaracteres.insertSpaces(res);
                 //Fin meterle espacios
 
-                int resultado = calc.evaluar(res2);
+                int resultado = calculadora.evaluar(res2);
                 System.out.println(resultado);
             }
 
@@ -43,14 +42,14 @@ public class Driver {
             for(int i=0;i<listaRespuesta.size();i++){
                 String res="";
                 StacksListas array2=new StacksListas();
-                res=array2.convertir(listaRespuesta.get(i));
+                res=StacksListas.convertir(listaRespuesta.get(i));
                 //Meterle espacios
                 manejoCaracteres manejo=new manejoCaracteres();
                 String res2="";
-                res2=manejo.insertSpaces(res);
+                res2=manejoCaracteres.insertSpaces(res);
                 //Fin meterle espacios
 
-                int resultado = calc.evaluar(res2);
+                int resultado = calculadora.evaluar(res2);
                 System.out.println(resultado);
             }
 

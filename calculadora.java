@@ -1,6 +1,7 @@
 import java.util.Stack;
 
 public class calculadora {
+    Singleton singleton = Singleton.getInstance();
     private static int operar(int a, int b, String operador) {
         switch (operador) {
             case "+":
